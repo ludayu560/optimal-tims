@@ -1,27 +1,47 @@
+@media screen and (max-width: 320px) {
+
+}
+
+@media screen and (max-width: 1023px) and (min-width: 321px){
+
+}
+
+@media screen and (min-width: 1024){
+  
+}
+
+// this code feels ethically incorrect
+html {
+  background-color:#282b30;
+}
+
 .App {
-  background-color: #282b30;
+  padding-top: 3vh;
   text-align: center;
-}
 
-.displayGrid {
-  width: 100vw;
-  height: 100vh;
-  display: grid;
-  column-gap: 1.23vw;
-  row-gap: 1.23vh;
-  grid-template-columns: repeat(9, 10vw);
-  grid-template-rows: repeat(9, 10vh);
-}
+  header, body, footer {
+    background-color: #767a82;
+    border-radius: 4vmin;
+    box-sizing : border-box;
+    border: 1vmin solid #767a82;
+    margin: 0;
+    margin-top: 1vh;
+  }
 
-h1 {
-  grid-column: 4 / 7;
-  grid-row: 4;
-  color: white;
+  header{
+    height: 10vh;
+  }
+  body {
+    height: 40vh;
+  }
+  footer {
+    height: 20vh;
+  }
 }
 
 span.good{
-  color: green;
+  color: #96FF96;
 } 
 span.bad {
-  color: red;
+  color: #FF9696;
 }
