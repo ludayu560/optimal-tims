@@ -1,25 +1,23 @@
-@media screen and (max-width: 320px) {
-
-}
-
-@media screen and (max-width: 1023px) and (min-width: 321px){
-
-}
-
-@media screen and (min-width: 1024){
-  
-}
 
 // this code feels ethically incorrect
 html {
   background-color:#282b30;
 }
 
+#infoPanel {
+  visibility: hidden;
+}
+
+#contentContainer {
+  margin-left: 5vw;
+}
 .App {
+  display: flex;
+  flex-direction: row;
   padding-top: 3vh;
   text-align: center;
 
-  header, body, footer {
+  header, body, footer, #infoPanel {
     background-color: #767a82;
     border-radius: 4vmin;
     box-sizing : border-box;
@@ -29,9 +27,11 @@ html {
   }
 
   header{
+    font-size: larger;
     height: 10vh;
   }
   body {
+    font-size: large;
     height: 40vh;
   }
   footer {
@@ -39,9 +39,43 @@ html {
   }
 }
 
+// we could make the size of the bad scale. idk.
+span {
+  font-size: 200%;
+}
 span.good{
   color: #96FF96;
 } 
 span.bad {
   color: #FF9696;
+}
+
+@media screen and (max-width: 1023px) and (min-width: 426px){
+  header, body, footer {
+    width: 50vw;
+  }
+  #infoContainer {
+    margin-left: 1vw;
+    #infoPanel {
+      visibility: visible;
+  
+      width: 40vw;
+      height: 83vh;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px){
+  header, body, footer {
+    width: 30vw;
+  }
+
+  #infoContainer {
+    margin-left: 1vw;
+    #infoPanel {
+      visibility: visible;
+      width: 60vw;
+      height: 83vh;
+    }
+  }
 }
