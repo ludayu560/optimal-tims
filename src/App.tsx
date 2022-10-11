@@ -16,7 +16,7 @@ function App() {
           <p>Time: {currTime}</p>
         </header>
         <body>
-          <h1>It's a <br /><span className={timsStatus}>{timsStatus}</span> <br /> time to go to DC Tims</h1>
+          <h1>It's a <br /><span className={timsStatus}>{timsStatus}</span> <br /> time to go to Tims</h1>
         </body>
         <footer>
 
