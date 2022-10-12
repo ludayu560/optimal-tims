@@ -18,6 +18,7 @@ html {
   text-align: center;
 
   header, body, footer, #infoPanel {
+    color: rgb(238, 206, 164);
     background-color: #767a82;
     border-radius: 2vmin;
     box-sizing : border-box;
@@ -29,6 +30,7 @@ html {
   header{
     font-size: larger;
     height: 10vh;
+    font-weight: 900;
   }
   body {
     font-size: large;

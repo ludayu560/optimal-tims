@@ -1,9 +1,9 @@
 import React from 'react';
+import { Time } from './time';
 import './App.scss';
 
 // get timsStatus
 var timsStatus: string = "good"
-var currTime: number = 0
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
           <p>Location: DC Tims</p>
         </header>
         <header>
-          <p>Time: {currTime}</p>
+          <Time></Time>
         </header>
         <body>
           <h1>It's a <br /><span className={timsStatus}>{timsStatus}</span> <br /> time to go to Tims</h1>
