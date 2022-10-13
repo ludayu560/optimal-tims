@@ -1,9 +1,7 @@
 import React from 'react';
 import { Time } from './time';
+import { Verdict } from './verdict';
 import './App.scss';
-
-// get timsStatus
-var timsStatus: string = "good"
 
 function App() {
   return (
@@ -16,7 +14,7 @@ function App() {
           <Time></Time>
         </header>
         <body>
-          <h1>It's a <br /><span className={timsStatus}>{timsStatus}</span> <br /> time to go to Tims</h1>
+          <Verdict></Verdict>
         </body>
         <footer>
 
