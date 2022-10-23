@@ -20,11 +20,8 @@ function App() {
 
         </footer>
       </div>
-
-
       <div id='infoContainer'>
         <div id='infoPanel'>
-
         </div>
       </div>
     </div>

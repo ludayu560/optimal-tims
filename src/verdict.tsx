@@ -2,7 +2,7 @@ import React, { useState, useEffect} from 'react'
 import dataSet from './shdata.json'
 
 // +/- time for start and end of classes
-const timeMargin: number = 15
+const timeMargin: number = 30
 // the cutoff after we consider it to be a bad time to go to Tims 
 const threshold: number = 200
 
@@ -20,6 +20,7 @@ interface trafficTime {
     end: number
     weight: number
 }
+
 var dayDict: {[key : string]: number} = {
     'M' : 1,
     'T' : 2,
@@ -27,12 +28,12 @@ var dayDict: {[key : string]: number} = {
     'Th' :4,
     'F' : 5,
 }
+
 var candidates: Array<dataItem> = []
 
 dataSet.forEach(i => {
     if (i.building === "DC") {
         candidates.push(i)
-        console.log(i)
     }
 });
 
@@ -46,7 +47,7 @@ export const Verdict = () => {
       () => {
         const intervalId = setInterval(() => {
           setTime(new Date())
-        }, 60000)
+        }, 600)
         //
         // find the classes today 
         candidates.forEach(i => {
@@ -71,7 +72,7 @@ export const Verdict = () => {
         });
         // convert from base-60 time to base-10. i.e. a count of pure minutes. 
         var minuteTime: number = time.getMinutes() + 60 * time.getHours()
-        
+        minuteTime = 520
         var currWeight: number = 0;
         // find the 'weight' of the current time. 
         // i.e. the number of people currently travelling through DC
@@ -80,7 +81,7 @@ export const Verdict = () => {
         });
 
         timsStatus = (currWeight <= threshold)? "good" : "bad"
-
+        
         console.log(currWeight)
         return () => {
           clearInterval(intervalId)
