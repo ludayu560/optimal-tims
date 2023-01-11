@@ -1,7 +1,7 @@
 import React from 'react';
 import { Time } from './time';
 import { Verdict } from './verdict';
-import './App.scss';
+import './App.css';
 
 function App() {
   return (
