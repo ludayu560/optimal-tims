@@ -1,5 +1,5 @@
 import React, { useState, useEffect} from 'react'
-import dataSet from './shdata.json'
+import dataSet from '../shdata.json'
 
 // +/- time for start and end of classes
 const timeMargin: number = 30

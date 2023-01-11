@@ -1,6 +1,6 @@
 import React from 'react';
-import { Time } from './time';
-import { Verdict } from './verdict';
+import { Time } from './data/time';
+import { Verdict } from './data/verdict';
 import './App.css';
 
 function App() {
