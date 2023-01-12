@@ -89,8 +89,10 @@ export const Verdict = () => {
       } 
     )
     return (
-        <div>
-            <h1>It's a <br /><span className={timsStatus}>{timsStatus}</span> <br /> time to go to Tims</h1>
+        <div style={{
+            textAlign: 'center'
+        }}>
+            <h1>It is a <br /> <span>{timsStatus}</span> <br /> time to go to Tims</h1>
         </div>
     )
 }

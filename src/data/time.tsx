@@ -11,24 +11,24 @@ var dayDict: { [key : number]: string}  = {
 }
 
 export const Time = () => {
-   
-    const [time, setTime] = useState(new Date());
-  
-    useEffect(
-      () => {
-        const intervalId = setInterval(() => {
-        
-          setTime(new Date())
-        }, 60000)
-        return () => {
-          clearInterval(intervalId)
-        }
-      } 
-    )
-  
-    return(
-      <div>
-        <p> {dayDict[time.getDay()]} {time.getHours().toString().padStart(2,'0')}:{time.getMinutes().toString().padStart(2,'0')}</p>
-      </div>
-    )
-  }
+  const [time, setTime] = useState(new Date());
+
+  useEffect(
+    () => {
+      const intervalId = setInterval(() => {
+        setTime(new Date())
+      }, 60000)
+      return () => {
+        clearInterval(intervalId)
+      }
+    } 
+  )
+
+  return(
+    <div>
+      {/* <h1> {dayDict[time.getDay()]} {time.getHours().toString().padStart(2,'0')}:{time.getMinutes().toString().padStart(2,'0')}</h1> */}
+
+      <h1>{time.getHours().toString().padStart(2,'0')}:{time.getMinutes().toString().padStart(2,'0')}</h1>
+    </div>
+  )
+}
