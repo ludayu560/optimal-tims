@@ -1,5 +1,8 @@
 import React, { useState, useEffect} from 'react'
 import dataSet from '../shdata.json'
+import { Typography } from '@mui/material'
+import { color } from '@mui/system'
+
 
 // +/- time for start and end of classes
 const timeMargin: number = 30
@@ -37,7 +40,7 @@ dataSet.forEach(i => {
     }
 });
 
-var timsStatus: string = ""
+var timsStatus: any = ""
 export const Verdict = () => {
     var trafficTimes: Array<trafficTime> = []
 
@@ -80,7 +83,7 @@ export const Verdict = () => {
             if (minuteTime >= i.start && minuteTime <= i.end)  currWeight += i.weight 
         });
 
-        timsStatus = (currWeight <= threshold)? "good" : "bad"
+        timsStatus = (currWeight <= threshold)? <p style={{color:'green'}}>Good</p> : <p style={{color:'black'}}>Bad</p>
         
         console.log(currWeight)
         return () => {
@@ -89,10 +92,10 @@ export const Verdict = () => {
       } 
     )
     return (
-        <div style={{
-            textAlign: 'center'
-        }}>
-            <h1>It is a <br /> <span>{timsStatus}</span> <br /> time to go to Tims</h1>
-        </div>
+        <>
+        {timsStatus}
+        </>
     )
 }
+
+export default Verdict

@@ -1,7 +1,5 @@
 :root {
     --background-default: #af5f56;
+    --background-accent: #b45241;
 }
 
-* {
-    background-color: var(--background-default);
-}

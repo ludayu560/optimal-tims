@@ -1,6 +1,7 @@
 import React, { useState, useEffect} from 'react'
+import { Typography } from '@mui/material';
 
-var dayDict: { [key : number]: string}  = {
+var dayDict = {
   1 : "Monday",
   2 : "Tuesday",
   3 : "Wednesday",
@@ -25,10 +26,8 @@ export const Time = () => {
   )
 
   return(
-    <div>
-      {/* <h1> {dayDict[time.getDay()]} {time.getHours().toString().padStart(2,'0')}:{time.getMinutes().toString().padStart(2,'0')}</h1> */}
-
-      <h1>{time.getHours().toString().padStart(2,'0')}:{time.getMinutes().toString().padStart(2,'0')}</h1>
-    </div>
+    <>
+      {(((time.getHours()>12)?(time.getHours()-12).toString():time.getHours()).concat(":"+time.getMinutes().toString().padStart(2,'0')))}
+    </>
   )
 }
