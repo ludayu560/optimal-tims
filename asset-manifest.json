@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.js": "/optimal-tims/static/js/main.360bd11e.js",
+    "main.js": "/optimal-tims/static/js/main.721ed549.js",
+    "static/media/logo.svg": "/optimal-tims/static/media/logo.4c3ad18cda5297342cdb63bbcc91f830.svg",
     "index.html": "/optimal-tims/index.html",
-    "main.360bd11e.js.map": "/optimal-tims/static/js/main.360bd11e.js.map"
+    "main.721ed549.js.map": "/optimal-tims/static/js/main.721ed549.js.map"
   },
   "entrypoints": [
-    "static/js/main.360bd11e.js"
+    "static/js/main.721ed549.js"
   ]
 }
