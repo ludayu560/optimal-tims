@@ -83,7 +83,7 @@ export const Verdict = () => {
             if (minuteTime >= i.start && minuteTime <= i.end)  currWeight += i.weight 
         });
 
-        timsStatus = (currWeight <= threshold)? <p style={{color:'green'}}>Good</p> : <p style={{color:'black'}}>Bad</p>
+        timsStatus = (currWeight <= threshold)? <p style={{color:'#C8102E'}}>Good</p> : <p style={{color:'#3f2021'}}>Bad</p>
         
         console.log(currWeight)
         return () => {

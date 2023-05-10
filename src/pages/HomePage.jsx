@@ -10,72 +10,30 @@ import { Container, Paper } from '@mui/material';
 import { Time } from '../data/time';
 import Verdict from '../data/verdict'
 import { Grid } from '@mui/material';
+import Header from './Header';
 
-
-const StyledToolbar = styled(Toolbar)(({ theme }) => ({
-    paddingTop: theme.spacing(2),
-    paddingBottom: theme.spacing(2),
-    '@media all': {
-      minHeight: 60,
-    },
-  }));
 
 function HomePage() {
     
     return (
-    <div>
-        {/* // Main Text */}
-        <Box backgroundColor='#BA484E' minHeight='100vh'>
+    <body style={{backgroundColor: "#f9f5ee", height: "100vh"}}>
+        <Header></Header>
 
-            {/* // Navbar */}
-            <Box>
-                <AppBar position="static" 
-                    sx={{
-                        backgroundColor: '#BA484E',
-                        borderBottom: '3px solid white'}}
-                    >
-                    <StyledToolbar>
+        <Container
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            height: "50vh",
+          }}>
+            <Typography fontSize={'3rem'} fontWeight={700} textAlign={'center'} color={'#3f2021'}> It is a</Typography>
+            <Typography fontSize={'4rem'} fontWeight={800} textAlign={'center'}>  <Verdict/> </Typography>
+            <Typography fontSize={'3rem'} fontWeight={700} textAlign={'center'} color={'#3f2021'}>  time to go to Tims</Typography>
+        </Container>
 
-                    {/* // Menu Button */}
-                    <IconButton
-                        size="large"
-                        edge="start"
-                        color="inherit"
-                        aria-label="open drawer"
-                        sx={{ position: 'absolute', right: 16}}>
 
-                        <MenuIcon />
-                    </IconButton>
-
-                    {/* // Time  */}
-                    <Typography variant='h5' fontWeight={700} sx={{ flexGrow: 1, alignSelf: 'center', textAlign: 'center'}}>
-                        <Time/>
-                    </Typography>
-                    </StyledToolbar>
-                </AppBar>
-            </Box>
-
-            <Grid
-                container
-                spacing={0}
-                direction="column"
-                alignItems="center"
-                justifyContent="center"
-                style={{ minHeight: '80vh' }}
-            >
-                <Typography item variant='h2' fontWeight={700} align='center' color={'#ffffff'}>
-
-                    It is a <br />
-                    <Typography variant='h1' fontWeight={'inherit'}>
-                        <Verdict/>
-                    </Typography>
-                    time to go to Tims
-                </Typography>
-            </Grid> 
-        </Box>
-        {/* // Menu */}
-
-    </div>
+    </body>
     )
 }
 
