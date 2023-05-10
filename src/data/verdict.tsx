@@ -1,5 +1,5 @@
 import React, { useState, useEffect} from 'react'
-import dataSet from '../../classes.json'
+import dataSet from '../classes.json'
 import { Typography } from '@mui/material'
 import { color } from '@mui/system'
 
