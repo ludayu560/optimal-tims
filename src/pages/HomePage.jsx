@@ -1,15 +1,6 @@
-import * as React from 'react';
-import { styled } from '@mui/material/styles';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import MenuIcon from '@mui/icons-material/Menu';
 import { Container, Paper } from '@mui/material';
-import { Time } from '../data/time';
 import Verdict from '../data/verdict'
-import { Grid } from '@mui/material';
 import Header from './Header';
 
 
